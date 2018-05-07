@@ -16,8 +16,8 @@ namespace MathWizardTests
         {
             //Arrange
             MathOp op = new MathOp();
-            op.LeftOperand = 10;
-            op.RightOperand = 5;
+            op.Left = 10;
+            op.Right = 5;
             op.Operator = "Plus";
             op.Result = 0;
             
@@ -35,8 +35,8 @@ namespace MathWizardTests
         {
             //Arrange
             MathOp op = new MathOp();
-            op.LeftOperand = 10;
-            op.RightOperand = 5;
+            op.Left = 10;
+            op.Right = 5;
             op.Operator = "Divided By";
             op.Result = 0;
             
@@ -53,8 +53,8 @@ namespace MathWizardTests
         public void TestSubtracktion(){
             //A
             MathOp op = new MathOp();
-            op.LeftOperand = 10;
-            op.RightOperand = 5;
+            op.Left = 10;
+            op.Right = 5;
             op.Operator = "Minus";
             op.Result = 0;
 
@@ -70,8 +70,8 @@ namespace MathWizardTests
         public void TestMultiply(){
             //A
             MathOp op = new MathOp();
-            op.LeftOperand = 10;
-            op.RightOperand = 5;
+            op.Left = 10;
+            op.Right = 5;
             op.Operator = "Times";
             op.Result = 0;
 
@@ -87,8 +87,8 @@ namespace MathWizardTests
         public void TestModulus(){
             //A
             MathOp op = new MathOp();
-            op.LeftOperand = 10;
-            op.RightOperand = 5;
+            op.Left = 10;
+            op.Right = 5;
             op.Operator = "Modulus";
             op.Result = 0;
 
