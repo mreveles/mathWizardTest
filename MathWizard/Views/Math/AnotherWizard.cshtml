@@ -1,0 +1,60 @@
+@model MathOp
+
+@{
+    ViewData["Title"] = "Registration";
+}
+@*This is the page that you input the numbers and choose the operation*@
+<div class="container">
+    <form class="form-control"
+    asp-action="DoMathOp"
+            method="POST">
+        <fieldset>
+            @* Title of Form 
+            <legend>Math Wizard</legend> *@
+            
+            <p class="modal-header">Math Wizard</p> @*card-footer*@
+            
+            @* Left Operand *@
+            <div class="form-group">
+                <label asp-for="Left"><p class="font-weight-bold">Left</p>
+                </label>
+                <input class="form-control"
+                    asp-for="Left"
+                    placeholder="Left Operand"
+                    type="number">
+            </div>
+
+            @* Operation Select *@
+            <div class="form=group">
+                <div class="dropdown-menu" aria-labelledby="dropdown01"></div>
+                <label asp-for="Operator"><p class="font-weight-bold">Operation</p></label>
+                <select class="list-group-item" asp-for="Operator">@*form-control*@
+                    @*Key words:*@
+                    <option>Plus</option>
+                    <option>Minus</option>
+                    <option>Times</option>
+                    <option>Divided By</option>
+                    <option>Modulus</option>
+                </select>
+            </div>
+
+            @* Right Operand *@
+            <div class="form-group">
+                <label asp-for="Right"><p class="font-weight-bold">Right</p>
+                </label>
+                <input class="form-control"
+                    asp-for="Right"
+                    placeholder="Right Operand"
+                    type="number">
+            </div>
+
+            @* Hidden Result *@
+            <input asp-for="Operator" type="hidden">
+
+            @* Submit Button *@
+            <div class="form-group">
+                <button class="btn-primary" type="submit">Submit</button>
+            </div>                
+        </fieldset>
+    </form>
+</div>

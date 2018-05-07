@@ -1,0 +1,38 @@
+@model MathOp
+
+@{
+    ViewData["Title"] = "Math Operation Result";
+    //Layout = null;
+}
+@*This is the initial final page, here I gotta add the round, ceiling and floor*@
+<p>
+    <span class="badge badge-dark">@Model.LeftOperand</span>
+    &nbsp;
+    <span class="badge badge-light">@Model.Operator</span>
+    &nbsp;
+    <span class="badge badge-dark">@Model.RightOperand</span>
+    &nbsp;    
+    <span class="badge badge-light">Equals</span> 
+    &nbsp;    
+    <span class="badge badge-success">@Model.Result </span>
+    &nbsp; 
+    <br>
+    <span class="badge badge-light">Rounded</span> 
+    &nbsp;
+    <span class="badge badge-success">@Math.Round(Model.Result) </span>
+    &nbsp;
+    <br>
+    <span class="badge badge-light">Rounded up</span> 
+    &nbsp;
+    <span class="badge badge-success">@Math.Ceiling(Model.Result) </span>
+    &nbsp;
+    <br>
+    <span class="badge badge-light">Rouded down</span> 
+    &nbsp;
+    <span class="badge badge-success">@Math.Floor(Model.Result) </span>
+
+    <a href="http://localhost:5000/Math/RoudingResult">link</a>
+@*this is the break line between Babb and Ian *@
+
+    
+</p>
